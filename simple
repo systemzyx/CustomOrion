@@ -1,4 +1,3 @@
--- Draggable Orion Lib for both pc and mobile!
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -16,8 +15,8 @@ local OrionLib = {
 		Default = {
 			Main = Color3.fromRGB(25, 25, 25),
 			Second = Color3.fromRGB(32, 32, 32),
-			Stroke = Color3.fromRGB(11, 253, 132),
-			Divider = Color3.fromRGB(11, 253, 132),
+			Stroke = Color3.fromRGB(0, 255, 128),
+			Divider = Color3.fromRGB(0, 255, 128),
 			Text = Color3.fromRGB(240, 240, 240),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}

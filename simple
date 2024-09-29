@@ -616,8 +616,8 @@ function OrionLib:MakeWindow(WindowConfig)
 	if WindowConfig.ShowIcon then
 		WindowName.Position = UDim2.new(0, 50, 0, -24)
 		local WindowIcon = SetProps(MakeElement("Image", WindowConfig.Icon), {
-			Size = UDim2.new(0, 21, 0, 21),
-			Position = UDim2.new(0, 25, 0, 15)
+			Size = UDim2.new(0, 22, 0, 22),
+			Position = UDim2.new(0, 24, 0, 15)
 		})
 		WindowIcon.Parent = MainWindow.TopBar
 	end	
@@ -690,7 +690,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			Parent = Orion,
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.4, 0),
-			Size = UDim2.new(0, 28, 0, 28),
+			Size = UDim2.new(0, 29, 0, 29),
 			ImageColor3 = Color3.fromRGB(0, 255, 128),
 			ImageTransparency = 1
 		})
@@ -701,7 +701,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 19, 0.5, 0),
 			TextXAlignment = Enum.TextXAlignment.Center,
-			Font = Enum.Font.FredokaOne,
+			Font = Enum.Font.Cinzel,
 			TextTransparency = 1
 		})
 

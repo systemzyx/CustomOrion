@@ -616,7 +616,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	if WindowConfig.ShowIcon then
 		WindowName.Position = UDim2.new(0, 50, 0, -24)
 		local WindowIcon = SetProps(MakeElement("Image", WindowConfig.Icon), {
-			Size = UDim2.new(10, 20, 10, 20),
+			Size = UDim2.new(0, 20, 0, 20),
 			Position = UDim2.new(0, 25, 0, 15)
 		})
 		WindowIcon.Parent = MainWindow.TopBar
@@ -859,7 +859,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				ButtonConfig = ButtonConfig or {}
 				ButtonConfig.Name = ButtonConfig.Name or "Button"
 				ButtonConfig.Callback = ButtonConfig.Callback or function() end
-				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://3944703587"
+				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://7733752575"
 
 				local Button = {}
 

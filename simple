@@ -697,11 +697,11 @@ function OrionLib:MakeWindow(WindowConfig)
 
 		local LoadSequenceText = SetProps(MakeElement("Label", WindowConfig.IntroText, 14), {
 			Parent = Orion,
-			Size = UDim2.new(5, 0, 5, 0),
+			Size = UDim2.new(1, 0, 1, 0),
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 19, 0.5, 0),
 			TextXAlignment = Enum.TextXAlignment.Center,
-			Font = Enum.Font.Kalam,
+			Font = Enum.Font.Sarpanch,
 			TextTransparency = 1
 		})
 
@@ -743,7 +743,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				Size = UDim2.new(1, -35, 1, 0),
 				Position = UDim2.new(0, 35, 0, 0),
 				Font = Enum.Font.FredokaOne,
-				TextTransparency = 0.4,
+				TextTransparency = 0.5,
 				Name = "Title"
 			}), "Text")
 		})

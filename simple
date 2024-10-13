@@ -14,9 +14,9 @@ local OrionLib = {
 		Default = {
 			Main = Color3.fromRGB(0, 0, 0),
 			Second = Color3.fromRGB(10, 10, 10),
-			Stroke = Color3.fromRGB(0, 255, 128),
-			Divider = Color3.fromRGB(0, 255, 128),
-			Text = Color3.fromRGB(0,255,128),
+			Stroke = Color3.fromRGB(65, 105, 225),
+			Divider = Color3.fromRGB(65, 105, 225),
+			Text = Color3.fromRGB(65, 105, 225),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
 	},
@@ -311,9 +311,9 @@ end)
 CreateElement("ScrollFrame", function(Color, Width)
 	local ScrollFrame = Create("ScrollingFrame", {
 		BackgroundTransparency = 1,
-		MidImage = "rbxassetid://7733752575",
-		BottomImage = "rbxassetid://7733752575",
-		TopImage = "rbxassetid://7733752575",
+		MidImage = "rbxassetid://7733973479",
+		BottomImage = "rbxassetid://7733973479",
+		TopImage = "rbxassetid://7733973479",
 		ScrollBarImageColor3 = Color,
 		BorderSizePixel = 0,
 		ScrollBarThickness = Width,
@@ -375,7 +375,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 	spawn(function()
 		NotificationConfig.Name = NotificationConfig.Name or "Notification"
 		NotificationConfig.Content = NotificationConfig.Content or "Test"
-		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://7733752575"
+		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://7733973479"
 		NotificationConfig.Time = NotificationConfig.Time or 5
 
 		local NotificationParent = SetProps(MakeElement("TFrame"), {
@@ -461,12 +461,12 @@ function OrionLib:MakeWindow(WindowConfig)
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://7733752575"
+	WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://7733973479"
 	WindowConfig.IntroText = WindowConfig.IntroText or "simple - orion"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or true
-	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://7733752575"
-	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://7733752575"
+	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://7733973479"
+	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://7733973479"
 	OrionLib.Folder = WindowConfig.ConfigFolder
 	OrionLib.SaveCfg = WindowConfig.SaveConfig
 
@@ -691,7 +691,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.4, 0),
 			Size = UDim2.new(0, 30, 0, 30),
-			ImageColor3 = Color3.fromRGB(0, 255, 128),
+			ImageColor3 = Color3.fromRGB(65,105,225),
 			ImageTransparency = 1
 		})
 

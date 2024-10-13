@@ -14,9 +14,9 @@ local OrionLib = {
 		Default = {
 			Main = Color3.fromRGB(0, 0, 0),
 			Second = Color3.fromRGB(10, 10, 10),
-			Stroke = Color3.fromRGB(65, 105, 225),
-			Divider = Color3.fromRGB(65, 105, 225),
-			Text = Color3.fromRGB(65, 105, 225),
+			Stroke = Color3.fromRGB(127,0,255),
+			Divider = Color3.fromRGB(127,0,255),
+			Text = Color3.fromRGB(127,0,255),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
 	},
@@ -346,7 +346,7 @@ end)
 CreateElement("Label", function(Text, TextSize, Transparency)
 	local Label = Create("TextLabel", {
 		Text = Text or "",
-		TextColor3 = Color3.fromRGB(240, 240, 240),
+		TextColor3 = Color3.fromRGB(127,0,255),
 		TextTransparency = Transparency or 0,
 		TextSize = TextSize or 15,
 		Font = Enum.Font.FredokaOne,
@@ -667,7 +667,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	AddConnection(MinimizeBtn.MouseButton1Up, function()
 		if Minimized then
 			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, 615, 0, 344)}):Play()
-			MinimizeBtn.Ico.Image = "rbxassetid://7733752575"
+			MinimizeBtn.Ico.Image = "rbxassetid://7733973479"
 			wait(.02)
 			MainWindow.ClipsDescendants = false
 			WindowStuff.Visible = true
@@ -675,7 +675,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		else
 			MainWindow.ClipsDescendants = true
 			WindowTopBarLine.Visible = false
-			MinimizeBtn.Ico.Image = "rbxassetid://7733752575"
+			MinimizeBtn.Ico.Image = "rbxassetid://7733973479"
 
 			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, WindowName.TextBounds.X + 140, 0, 50)}):Play()
 			wait(0.1)
@@ -691,7 +691,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.4, 0),
 			Size = UDim2.new(0, 30, 0, 30),
-			ImageColor3 = Color3.fromRGB(65,105,225),
+			ImageColor3 = Color3.fromRGB(127,0,255),
 			ImageTransparency = 1
 		})
 
@@ -857,9 +857,9 @@ function OrionLib:MakeWindow(WindowConfig)
 			end    
 			function ElementFunction:AddButton(ButtonConfig)
 				ButtonConfig = ButtonConfig or {}
-				ButtonConfig.Name = ButtonConfig.Name or "Button"
+				ButtonConfig.Name = ButtonConfig.Name or "Quantum XV Library"
 				ButtonConfig.Callback = ButtonConfig.Callback or function() end
-				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://7733752575"
+				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://7733973479"
 
 				local Button = {}
 
@@ -915,7 +915,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				ToggleConfig.Name = ToggleConfig.Name or "Toggle"
 				ToggleConfig.Default = ToggleConfig.Default or false
 				ToggleConfig.Callback = ToggleConfig.Callback or function() end
-				ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(9, 99, 195)
+				ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(127,0,255)
 				ToggleConfig.Flag = ToggleConfig.Flag or nil
 				ToggleConfig.Save = ToggleConfig.Save or false
 
@@ -1001,7 +1001,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				SliderConfig.Default = SliderConfig.Default or 50
 				SliderConfig.Callback = SliderConfig.Callback or function() end
 				SliderConfig.ValueName = SliderConfig.ValueName or "Value"
-				SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(9, 149, 98)
+				SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(127,0,255)
 				SliderConfig.Flag = SliderConfig.Flag or nil
 				SliderConfig.Save = SliderConfig.Save or false
 

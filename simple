@@ -373,7 +373,7 @@ local NotificationHolder = SetProps(SetChildren(MakeElement("TFrame"), {
 
 function OrionLib:MakeNotification(NotificationConfig)
 	spawn(function()
-		NotificationConfig.Name = NotificationConfig.Name or "Notification"
+		NotificationConfig.Name = NotificationConfig.Name or "Quantum XV Orion"
 		NotificationConfig.Content = NotificationConfig.Content or "Test"
 		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://7733973479"
 		NotificationConfig.Time = NotificationConfig.Time or 5
@@ -462,7 +462,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		WindowConfig.IntroEnabled = true
 	end
 	WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://7733973479"
-	WindowConfig.IntroText = WindowConfig.IntroText or "simple - orion"
+	WindowConfig.IntroText = WindowConfig.IntroText or "Quantum XV - CO"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or true
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://7733973479"
@@ -994,7 +994,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			end  
 			function ElementFunction:AddSlider(SliderConfig)
 				SliderConfig = SliderConfig or {}
-				SliderConfig.Name = SliderConfig.Name or "Slider"
+				SliderConfig.Name = SliderConfig.Name or "QXV Slider"
 				SliderConfig.Min = SliderConfig.Min or 0
 				SliderConfig.Max = SliderConfig.Max or 100
 				SliderConfig.Increment = SliderConfig.Increment or 1

@@ -376,7 +376,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 		NotificationConfig.Name = NotificationConfig.Name or "Quantum XV Orion"
 		NotificationConfig.Content = NotificationConfig.Content or "Test"
 		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://7733973479"
-		NotificationConfig.Time = NotificationConfig.Time or 5
+		NotificationConfig.Time = NotificationConfig.Time or 4
 
 		local NotificationParent = SetProps(MakeElement("TFrame"), {
 			Size = UDim2.new(1, 0, 0, 0),
@@ -384,7 +384,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 			Parent = NotificationHolder
 		})
 
-		local NotificationFrame = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(25, 25, 25), 0, 10), {
+		local NotificationFrame = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(0, 255, 255), 0, 10), {
 			Parent = NotificationParent, 
 			Size = UDim2.new(1, 0, 0, 0),
 			Position = UDim2.new(1, -55, 0, 0),
@@ -395,7 +395,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 			MakeElement("Padding", 12, 12, 12, 12),
 			SetProps(MakeElement("Image", NotificationConfig.Image), {
 				Size = UDim2.new(0, 20, 0, 20),
-				ImageColor3 = Color3.fromRGB(240, 240, 240),
+				ImageColor3 = Color3.fromRGB(0, 255, 255),
 				Name = "Icon"
 			}),
 			SetProps(MakeElement("Label", NotificationConfig.Name, 15), {
@@ -410,7 +410,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 				Font = Enum.Font.FredokaOne,
 				Name = "Content",
 				AutomaticSize = Enum.AutomaticSize.Y,
-				TextColor3 = Color3.fromRGB(200, 200, 200),
+				TextColor3 = Color3.fromRGB(0, 255, 255),
 				TextWrapped = true
 			})
 		})

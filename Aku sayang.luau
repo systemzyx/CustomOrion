@@ -1758,5 +1758,71 @@ end
 function OrionLib:Destroy()
 	Orion:Destroy()
 end
+local Orion = game.CoreGui:FindFirstChild("Orion")
+if not Orion then return end
 
+local reopenButton = Instance.new("ImageButton")
+reopenButton.Name = "OrionReopenButton"
+reopenButton.Size = UDim2.new(0, 60, 0, 60)
+reopenButton.Position = UDim2.new(0, 20, 0.5, 0)
+reopenButton.BackgroundTransparency = 1
+reopenButton.Image = "rbxassetid://3570695787" -- circle asset
+reopenButton.ImageColor3 = Color3.new(1,1,1)
+reopenButton.Parent = game.CoreGui
+
+local gradient = Instance.new("UIGradient", reopenButton)
+gradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255,0,0)),
+    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255,127,0)),
+    ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255,255,0)),
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0,255,0)),
+    ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0,255,255)),
+    ColorSequenceKeypoint.new(0.83, Color3.fromRGB(0,0,255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(139,0,255))
+})
+
+-- Animate Gradient
+task.spawn(function()
+    while task.wait(0.03) do
+        gradient.Rotation = (gradient.Rotation + 1) % 360
+    end
+end)
+
+local dragging, dragInput, dragStart, startPos
+reopenButton.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = reopenButton.Position
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+reopenButton.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        local delta = input.Position - dragStart
+        reopenButton.Position = UDim2.new(
+            startPos.X.Scale, startPos.X.Offset + delta.X,
+            startPos.Y.Scale, startPos.Y.Offset + delta.Y
+        )
+    end
+end)
+
+-- On click, show Orion GUI
+reopenButton.MouseButton1Click:Connect(function()
+    local Orion = game.CoreGui:FindFirstChild("Orion")
+    if Orion then
+        Orion.Enabled = not Orion.Enabled
+    end
+end)
 return OrionLib

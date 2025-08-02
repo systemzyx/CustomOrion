@@ -375,7 +375,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 	spawn(function()
 		NotificationConfig.Name = NotificationConfig.Name or "Quantum XV Orion"
 		NotificationConfig.Content = NotificationConfig.Content or "Test"
-		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://7733973479"
+		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://8834748103"
 		NotificationConfig.Time = NotificationConfig.Time or 4
 
 		local NotificationParent = SetProps(MakeElement("TFrame"), {
@@ -462,7 +462,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = false
 	end
-	WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://7733973479"
+	WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://8834748103"
 	WindowConfig.IntroText = WindowConfig.IntroText or "Modified Orion Library"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or true

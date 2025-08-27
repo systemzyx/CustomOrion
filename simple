@@ -50,7 +50,7 @@ if syn then
 	syn.protect_gui(Orion)
 	Orion.Parent = game.CoreGui
 else
-	Orion.Parent = gethui() or game.CoreGui
+	Orion.Parent = game.CoreGui
 end
 
 function OrionLib:IsRunning()
